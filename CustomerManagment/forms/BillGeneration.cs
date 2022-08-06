@@ -16,5 +16,10 @@ namespace CustomerManagment.forms
         {
             InitializeComponent();
         }
+
+        private void lblType_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
