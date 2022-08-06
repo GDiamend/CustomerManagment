@@ -10,15 +10,14 @@ namespace CustomerManagment.models
     {
         public string id { get; private set; }
         public BillType billType { get; private set; }
-        public string number { get; private set; }
+        public int number { get; private set; }
         public Customer customer { get; private set; }
         public List<Article> articles { get; private set; }
         public double finalPrice { get; private set; }
         public DateTime dateTime { get; private set; }
 
-        public Bill(string id, BillType billType, string number, Customer customer)
+        public Bill(BillType billType, int number, Customer customer)
         {
-            this.id = id;
             this.billType = billType;
             this.number = number;
             this.customer = customer;

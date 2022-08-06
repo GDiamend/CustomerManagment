@@ -34,11 +34,11 @@
             this.txtDni = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtCreditCard = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.lblDni = new System.Windows.Forms.Label();
-            this.lblCreditCard = new System.Windows.Forms.Label();
+            this.lblTextName = new System.Windows.Forms.Label();
+            this.lblTextSurname = new System.Windows.Forms.Label();
+            this.lblTextPhone = new System.Windows.Forms.Label();
+            this.lblTextDni = new System.Windows.Forms.Label();
+            this.lblTextCreditCard = new System.Windows.Forms.Label();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -93,50 +93,50 @@
             this.txtCreditCard.Size = new System.Drawing.Size(198, 23);
             this.txtCreditCard.TabIndex = 5;
             // 
-            // lblName
+            // lblTextName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(245, 65);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(39, 15);
-            this.lblName.TabIndex = 6;
-            this.lblName.Text = "Name";
+            this.lblTextName.AutoSize = true;
+            this.lblTextName.Location = new System.Drawing.Point(245, 65);
+            this.lblTextName.Name = "lblTextName";
+            this.lblTextName.Size = new System.Drawing.Size(39, 15);
+            this.lblTextName.TabIndex = 6;
+            this.lblTextName.Text = "Name";
             // 
-            // lblSurname
+            // lblTextSurname
             // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(245, 113);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(54, 15);
-            this.lblSurname.TabIndex = 7;
-            this.lblSurname.Text = "Surname";
+            this.lblTextSurname.AutoSize = true;
+            this.lblTextSurname.Location = new System.Drawing.Point(245, 113);
+            this.lblTextSurname.Name = "lblTextSurname";
+            this.lblTextSurname.Size = new System.Drawing.Size(54, 15);
+            this.lblTextSurname.TabIndex = 7;
+            this.lblTextSurname.Text = "Surname";
             // 
-            // lblPhone
+            // lblTextPhone
             // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(245, 216);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(41, 15);
-            this.lblPhone.TabIndex = 8;
-            this.lblPhone.Text = "Phone";
+            this.lblTextPhone.AutoSize = true;
+            this.lblTextPhone.Location = new System.Drawing.Point(245, 216);
+            this.lblTextPhone.Name = "lblTextPhone";
+            this.lblTextPhone.Size = new System.Drawing.Size(41, 15);
+            this.lblTextPhone.TabIndex = 8;
+            this.lblTextPhone.Text = "Phone";
             // 
-            // lblDni
+            // lblTextDni
             // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(245, 166);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(25, 15);
-            this.lblDni.TabIndex = 9;
-            this.lblDni.Text = "Dni";
+            this.lblTextDni.AutoSize = true;
+            this.lblTextDni.Location = new System.Drawing.Point(245, 166);
+            this.lblTextDni.Name = "lblTextDni";
+            this.lblTextDni.Size = new System.Drawing.Size(25, 15);
+            this.lblTextDni.TabIndex = 9;
+            this.lblTextDni.Text = "Dni";
             // 
-            // lblCreditCard
+            // lblTextCreditCard
             // 
-            this.lblCreditCard.AutoSize = true;
-            this.lblCreditCard.Location = new System.Drawing.Point(245, 267);
-            this.lblCreditCard.Name = "lblCreditCard";
-            this.lblCreditCard.Size = new System.Drawing.Size(67, 15);
-            this.lblCreditCard.TabIndex = 10;
-            this.lblCreditCard.Text = "Credit Card";
+            this.lblTextCreditCard.AutoSize = true;
+            this.lblTextCreditCard.Location = new System.Drawing.Point(245, 267);
+            this.lblTextCreditCard.Name = "lblTextCreditCard";
+            this.lblTextCreditCard.Size = new System.Drawing.Size(67, 15);
+            this.lblTextCreditCard.TabIndex = 10;
+            this.lblTextCreditCard.Text = "Credit Card";
             // 
             // btnInsert
             // 
@@ -227,11 +227,11 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.lblCreditCard);
-            this.Controls.Add(this.lblDni);
-            this.Controls.Add(this.lblPhone);
-            this.Controls.Add(this.lblSurname);
-            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblTextCreditCard);
+            this.Controls.Add(this.lblTextDni);
+            this.Controls.Add(this.lblTextPhone);
+            this.Controls.Add(this.lblTextSurname);
+            this.Controls.Add(this.lblTextName);
             this.Controls.Add(this.txtCreditCard);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.txtDni);
@@ -254,11 +254,11 @@
         private TextBox txtDni;
         private TextBox txtPhone;
         private TextBox txtCreditCard;
-        private Label lblName;
-        private Label lblSurname;
-        private Label lblPhone;
-        private Label lblDni;
-        private Label lblCreditCard;
+        private Label lblTextName;
+        private Label lblTextSurname;
+        private Label lblTextPhone;
+        private Label lblTextDni;
+        private Label lblTextCreditCard;
         private Button btnInsert;
         private Button btnClear;
         private Button btnDelete;

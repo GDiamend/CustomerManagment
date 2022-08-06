@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblBillNumber = new System.Windows.Forms.Label();
-            this.lblBilllType = new System.Windows.Forms.Label();
+            this.lblTextBillNumber = new System.Windows.Forms.Label();
+            this.lblTextBIllType = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -50,26 +50,29 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.textBox20 = new System.Windows.Forms.TextBox();
-            this.lblType = new System.Windows.Forms.Label();
+            this.lblBillNumber = new System.Windows.Forms.Label();
+            this.lblTextCustomer = new System.Windows.Forms.Label();
+            this.cbxCustomerList = new System.Windows.Forms.ComboBox();
+            this.cbxBillType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // lblBillNumber
+            // lblTextBillNumber
             // 
-            this.lblBillNumber.AutoSize = true;
-            this.lblBillNumber.Location = new System.Drawing.Point(344, 46);
-            this.lblBillNumber.Name = "lblBillNumber";
-            this.lblBillNumber.Size = new System.Drawing.Size(70, 15);
-            this.lblBillNumber.TabIndex = 0;
-            this.lblBillNumber.Text = "Bill Number";
+            this.lblTextBillNumber.AutoSize = true;
+            this.lblTextBillNumber.Location = new System.Drawing.Point(276, 75);
+            this.lblTextBillNumber.Name = "lblTextBillNumber";
+            this.lblTextBillNumber.Size = new System.Drawing.Size(70, 15);
+            this.lblTextBillNumber.TabIndex = 0;
+            this.lblTextBillNumber.Text = "Bill Number";
             // 
-            // lblBilllType
+            // lblTextBIllType
             // 
-            this.lblBilllType.AutoSize = true;
-            this.lblBilllType.Location = new System.Drawing.Point(169, 9);
-            this.lblBilllType.Name = "lblBilllType";
-            this.lblBilllType.Size = new System.Drawing.Size(50, 15);
-            this.lblBilllType.TabIndex = 1;
-            this.lblBilllType.Text = "Bill Type";
+            this.lblTextBIllType.AutoSize = true;
+            this.lblTextBIllType.Location = new System.Drawing.Point(174, 9);
+            this.lblTextBIllType.Name = "lblTextBIllType";
+            this.lblTextBIllType.Size = new System.Drawing.Size(50, 15);
+            this.lblTextBIllType.TabIndex = 1;
+            this.lblTextBIllType.Text = "Bill Type";
             // 
             // textBox1
             // 
@@ -211,22 +214,49 @@
             this.textBox20.Size = new System.Drawing.Size(51, 23);
             this.textBox20.TabIndex = 12;
             // 
-            // lblType
+            // lblBillNumber
             // 
-            this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(169, 46);
-            this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(50, 15);
-            this.lblType.TabIndex = 22;
-            this.lblType.Text = "Bill Type";
-            this.lblType.Click += new System.EventHandler(this.lblType_Click);
+            this.lblBillNumber.AutoSize = true;
+            this.lblBillNumber.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblBillNumber.Location = new System.Drawing.Point(264, 91);
+            this.lblBillNumber.Name = "lblBillNumber";
+            this.lblBillNumber.Size = new System.Drawing.Size(0, 17);
+            this.lblBillNumber.TabIndex = 23;
+            // 
+            // lblTextCustomer
+            // 
+            this.lblTextCustomer.AutoSize = true;
+            this.lblTextCustomer.Location = new System.Drawing.Point(12, 75);
+            this.lblTextCustomer.Name = "lblTextCustomer";
+            this.lblTextCustomer.Size = new System.Drawing.Size(59, 15);
+            this.lblTextCustomer.TabIndex = 24;
+            this.lblTextCustomer.Text = "Customer";
+            // 
+            // cbxCustomerList
+            // 
+            this.cbxCustomerList.FormattingEnabled = true;
+            this.cbxCustomerList.Location = new System.Drawing.Point(12, 93);
+            this.cbxCustomerList.Name = "cbxCustomerList";
+            this.cbxCustomerList.Size = new System.Drawing.Size(150, 23);
+            this.cbxCustomerList.TabIndex = 25;
+            // 
+            // cbxBillType
+            // 
+            this.cbxBillType.FormattingEnabled = true;
+            this.cbxBillType.Location = new System.Drawing.Point(174, 27);
+            this.cbxBillType.Name = "cbxBillType";
+            this.cbxBillType.Size = new System.Drawing.Size(46, 23);
+            this.cbxBillType.TabIndex = 26;
             // 
             // BillGeneration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 631);
-            this.Controls.Add(this.lblType);
+            this.Controls.Add(this.cbxBillType);
+            this.Controls.Add(this.cbxCustomerList);
+            this.Controls.Add(this.lblTextCustomer);
+            this.Controls.Add(this.lblBillNumber);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.textBox13);
@@ -247,10 +277,11 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblBilllType);
-            this.Controls.Add(this.lblBillNumber);
+            this.Controls.Add(this.lblTextBIllType);
+            this.Controls.Add(this.lblTextBillNumber);
             this.Name = "BillGeneration";
             this.Text = "BillGeneration";
+            this.Load += new System.EventHandler(this.BillGeneration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,8 +289,8 @@
 
         #endregion
 
-        private Label lblBillNumber;
-        private Label lblBilllType;
+        private Label lblTextBillNumber;
+        private Label lblTextBIllType;
         private TextBox textBox1;
         private TextBox textBox2;
         private TextBox textBox3;
@@ -280,6 +311,9 @@
         private TextBox textBox18;
         private TextBox textBox19;
         private TextBox textBox20;
-        private Label lblType;
+        private Label lblBillNumber;
+        private Label lblTextCustomer;
+        private ComboBox cbxCustomerList;
+        private ComboBox cbxBillType;
     }
 }

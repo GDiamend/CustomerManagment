@@ -28,7 +28,7 @@ namespace CustomerManagment
 
         private DaoCustomer createDaoCustomer()
         {
-            //Creo un clienteDao que brinda la conexión a la Bd
+            //Creo un DaoCustomer que brinda la conexión a la Bd
             DaoCustomer daoCustomer = new DaoCustomer();
             return daoCustomer;
         }
@@ -86,12 +86,12 @@ namespace CustomerManagment
         private void btnEdit_Click(object sender, EventArgs e)
         {
             Customer customer = (Customer)lstCustomer.SelectedItem;
+            lblId.Text = customer.id;
             txtName.Text = customer.name;
             txtSurname.Text = customer.surname;
             txtDni.Text = customer.dni;
             txtPhone.Text = customer.phone;
             txtCreditCard.Text = customer.creditCard;
-            lblId.Text = customer.id;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
