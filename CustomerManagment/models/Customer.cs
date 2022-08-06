@@ -8,12 +8,12 @@ namespace CustomerManagment.models
 {
     internal class Customer
     {
-        public string id { get; set; }
-        public string name { get; set; }
-        public string surname { get; set; }
-        public string dni { get; set; }
-        public string phone { get; set; }
-        public string creditCard { get; set; }
+        public string id { get; private set; }
+        public string name { get; private set; }
+        public string surname { get; private set; }
+        public string dni { get; private set; }
+        public string phone { get; private set; }
+        public string creditCard { get; private set; }
 
         private string fullName()
         {

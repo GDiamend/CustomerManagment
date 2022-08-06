@@ -46,48 +46,49 @@
             this.lblTextId = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblCustomerList = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstCustomer
             // 
             this.lstCustomer.FormattingEnabled = true;
             this.lstCustomer.ItemHeight = 15;
-            this.lstCustomer.Location = new System.Drawing.Point(21, 12);
+            this.lstCustomer.Location = new System.Drawing.Point(3, 30);
             this.lstCustomer.Name = "lstCustomer";
-            this.lstCustomer.Size = new System.Drawing.Size(212, 424);
+            this.lstCustomer.Size = new System.Drawing.Size(212, 394);
             this.lstCustomer.TabIndex = 0;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(485, 56);
+            this.txtName.Location = new System.Drawing.Point(381, 65);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(198, 23);
             this.txtName.TabIndex = 1;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(485, 104);
+            this.txtSurname.Location = new System.Drawing.Point(381, 113);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(198, 23);
             this.txtSurname.TabIndex = 2;
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(485, 157);
+            this.txtDni.Location = new System.Drawing.Point(381, 166);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(198, 23);
             this.txtDni.TabIndex = 3;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(485, 207);
+            this.txtPhone.Location = new System.Drawing.Point(381, 216);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(198, 23);
             this.txtPhone.TabIndex = 4;
             // 
             // txtCreditCard
             // 
-            this.txtCreditCard.Location = new System.Drawing.Point(485, 258);
+            this.txtCreditCard.Location = new System.Drawing.Point(381, 267);
             this.txtCreditCard.Name = "txtCreditCard";
             this.txtCreditCard.Size = new System.Drawing.Size(198, 23);
             this.txtCreditCard.TabIndex = 5;
@@ -95,7 +96,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(349, 56);
+            this.lblName.Location = new System.Drawing.Point(245, 65);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(39, 15);
             this.lblName.TabIndex = 6;
@@ -104,7 +105,7 @@
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(349, 104);
+            this.lblSurname.Location = new System.Drawing.Point(245, 113);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(54, 15);
             this.lblSurname.TabIndex = 7;
@@ -113,7 +114,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(349, 207);
+            this.lblPhone.Location = new System.Drawing.Point(245, 216);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(41, 15);
             this.lblPhone.TabIndex = 8;
@@ -122,7 +123,7 @@
             // lblDni
             // 
             this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(349, 157);
+            this.lblDni.Location = new System.Drawing.Point(245, 166);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(25, 15);
             this.lblDni.TabIndex = 9;
@@ -131,7 +132,7 @@
             // lblCreditCard
             // 
             this.lblCreditCard.AutoSize = true;
-            this.lblCreditCard.Location = new System.Drawing.Point(349, 258);
+            this.lblCreditCard.Location = new System.Drawing.Point(245, 267);
             this.lblCreditCard.Name = "lblCreditCard";
             this.lblCreditCard.Size = new System.Drawing.Size(67, 15);
             this.lblCreditCard.TabIndex = 10;
@@ -139,7 +140,7 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(485, 312);
+            this.btnInsert.Location = new System.Drawing.Point(381, 321);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(75, 23);
             this.btnInsert.TabIndex = 11;
@@ -149,7 +150,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(349, 312);
+            this.btnClear.Location = new System.Drawing.Point(245, 321);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 12;
@@ -159,7 +160,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(608, 312);
+            this.btnDelete.Location = new System.Drawing.Point(504, 321);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 13;
@@ -169,7 +170,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(349, 357);
+            this.btnEdit.Location = new System.Drawing.Point(245, 366);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 14;
@@ -180,7 +181,7 @@
             // lblTextId
             // 
             this.lblTextId.AutoSize = true;
-            this.lblTextId.Location = new System.Drawing.Point(349, 21);
+            this.lblTextId.Location = new System.Drawing.Point(245, 30);
             this.lblTextId.Name = "lblTextId";
             this.lblTextId.Size = new System.Drawing.Size(24, 15);
             this.lblTextId.TabIndex = 15;
@@ -189,14 +190,14 @@
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(485, 21);
+            this.lblId.Location = new System.Drawing.Point(381, 30);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(0, 15);
             this.lblId.TabIndex = 15;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(485, 357);
+            this.btnUpdate.Location = new System.Drawing.Point(381, 366);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 16;
@@ -204,11 +205,21 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // lblCustomerList
+            // 
+            this.lblCustomerList.AutoSize = true;
+            this.lblCustomerList.Location = new System.Drawing.Point(3, 7);
+            this.lblCustomerList.Name = "lblCustomerList";
+            this.lblCustomerList.Size = new System.Drawing.Size(80, 15);
+            this.lblCustomerList.TabIndex = 17;
+            this.lblCustomerList.Text = "Customer List";
+            // 
             // CustomerManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(624, 431);
+            this.Controls.Add(this.lblCustomerList);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblTextId);
@@ -255,5 +266,6 @@
         private Label lblTextId;
         private Label lblId;
         private Button btnUpdate;
+        private Label lblCustomerList;
     }
 }

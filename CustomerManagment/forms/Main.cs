@@ -22,5 +22,11 @@ namespace CustomerManagment.forms
             CustomerManagment customerManagment = new CustomerManagment();
             customerManagment.ShowDialog();
         }
+
+        private void btnBillManagment_Click(object sender, EventArgs e)
+        {
+            BillManagment billManagment = new BillManagment();
+            billManagment.ShowDialog();
+        }
     }
 }
