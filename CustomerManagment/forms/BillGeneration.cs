@@ -21,7 +21,7 @@ namespace CustomerManagment.forms
 
         private Bill createBill()
         {
-            Bill bill = new Bill((BillType)cbxBillType.SelectedItem, Int16.Parse(lblBillNumber.Text), (Customer)cbxCustomerList.SelectedItem);
+            Bill bill = new Bill(lblBillId.Text, (BillType)cbxBillType.SelectedItem, Int16.Parse(lblBillNumber.Text), (Customer)cbxCustomerList.SelectedItem);
             return bill;
         }
 
@@ -59,10 +59,61 @@ namespace CustomerManagment.forms
                 cbxBillType.Items.Add(billType);
             }
         }
+
+        private void clearFields()
+        {
+            lblBillId.Text = "";
+            txtCuantity0.Clear();
+            txtCuantity1.Clear();
+            txtCuantity2.Clear();
+            txtCuantity3.Clear();
+            txtCuantity4.Clear();
+            txtCuantity5.Clear();
+            txtCuantity6.Clear();
+            txtCuantity7.Clear();
+            txtCuantity8.Clear();
+            txtCuantity9.Clear();
+            txtDescription0.Clear();
+            txtDescription1.Clear();
+            txtDescription2.Clear();
+            txtDescription3.Clear();
+            txtDescription4.Clear();
+            txtDescription5.Clear();
+            txtDescription6.Clear();
+            txtDescription7.Clear();
+            txtDescription8.Clear();
+            txtDescription9.Clear();
+            txtPrice0.Clear();
+            txtPrice1.Clear();
+            txtPrice2.Clear();
+            txtPrice3.Clear();
+            txtPrice4.Clear();
+            txtPrice5.Clear();
+            txtPrice6.Clear();
+            txtPrice7.Clear();
+            txtPrice8.Clear();
+            txtPrice9.Clear();
+        }
+
+        private void numberGenerator()
+        {
+            int index = 0001;
+            int number = 000000000;
+            number += 1;
+
+            this.createDaoBill();
+
+            lblBillNumber.Text = index.ToString() + number.ToString();
+        }
         private void BillGeneration_Load(object sender, EventArgs e)
         {
             this.updateList();
             this.showBillType();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            this.clearFields();
         }
     }
 }

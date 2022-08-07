@@ -36,7 +36,7 @@ namespace CustomerManagment
         private void btnInsert_Click(object sender, EventArgs e)
         {
             this.createDaoCustomer().insert(this.createCustomer());
-            this.cleanFields();
+            this.clearFields();
             this.updateList();
         }
 
@@ -48,7 +48,7 @@ namespace CustomerManagment
             this.updateList();
         }
 
-        private void cleanFields()
+        private void clearFields()
         {
             lblId.Text = " ";
             txtName.Clear();
@@ -60,7 +60,7 @@ namespace CustomerManagment
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            this.cleanFields();
+            this.clearFields();
         }
 
         private void CustomerManagment_Load(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace CustomerManagment
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             this.createDaoCustomer().update(this.createCustomer());
-            this.cleanFields();
+            this.clearFields();
             this.updateList();
         }
     }

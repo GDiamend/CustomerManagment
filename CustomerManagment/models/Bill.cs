@@ -16,14 +16,20 @@ namespace CustomerManagment.models
         public double finalPrice { get; private set; }
         public DateTime dateTime { get; private set; }
 
-        public Bill(BillType billType, int number, Customer customer)
+        public Bill(string id, BillType billType, int number, Customer customer)
         {
+            this.id = id;
             this.billType = billType;
             this.number = number;
             this.customer = customer;
             this.articles = new List<Article>();
             this.finalPrice = this.calculateFinalPrice();
             this.dateTime = dateTime.ToLocalTime();
+        }
+
+        public string getCustomerId()
+        {
+            return this.customer.id;
         }
 
         private double calculateFinalPrice()
