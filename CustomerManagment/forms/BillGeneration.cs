@@ -45,17 +45,24 @@ namespace CustomerManagment.forms
 
             //Limpio la lista de los datos previos para asegurar que no se repitan cada vez que se actualiza
             cbxCustomerList.Items.Clear();
-            //Agrego los clientes de la BD a la lista del form
-            for (int i = 0; i < dbList.Count; i++)
+            //Agrego los clientes de la BD a la lista del form con un foreach
+            foreach (Customer customer in dbList)
             {
-                Customer customer = dbList[i];
                 cbxCustomerList.Items.Add(customer);
             }
         }
 
+        private void showBillType()
+        {
+            foreach (BillType billType in Enum.GetValues(typeof(BillType)))
+            {
+                cbxBillType.Items.Add(billType);
+            }
+        }
         private void BillGeneration_Load(object sender, EventArgs e)
         {
-
+            this.updateList();
+            this.showBillType();
         }
     }
 }

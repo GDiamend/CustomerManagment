@@ -75,10 +75,9 @@ namespace CustomerManagment
 
             //Limpio la lista de los datos previos para asegurar que no se repitan cada vez que se actualiza
             lstCustomer.Items.Clear();
-            //Agrego los clientes de la BD a la lista del form
-            for (int i = 0; i < dbList.Count; i++)
+            //Agrego los clientes de la BD a la lista del form con un foreach
+            foreach (Customer customer in dbList)
             {
-                Customer customer = dbList[i];
                 lstCustomer.Items.Add(customer);
             }
         }
