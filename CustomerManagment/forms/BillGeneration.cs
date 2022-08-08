@@ -21,7 +21,7 @@ namespace CustomerManagment.forms
 
         private Bill createBill()
         {
-            Bill bill = new Bill(lblBillId.Text, (BillType)cbxBillType.SelectedItem, Int16.Parse(lblBillNumber.Text), (Customer)cbxCustomerList.SelectedItem);
+            Bill bill = new Bill(lblBillId.Text, (BillType)cbxBillType.SelectedItem, Int32.Parse(lblBillNumber.Text), (Customer)cbxCustomerList.SelectedItem);
             return bill;
         }
 
@@ -58,6 +58,11 @@ namespace CustomerManagment.forms
             {
                 cbxBillType.Items.Add(billType);
             }
+        }
+
+        public string getCustomerData()
+        {
+            return (string)cbxCustomerList.SelectedItem;
         }
 
         private void clearFields()
@@ -97,23 +102,114 @@ namespace CustomerManagment.forms
 
         private void numberGenerator()
         {
-            int index = 0001;
-            int number = 000000000;
-            number += 1;
+            int number = this.createDaoBill().getLastBillNumber() + 1;
 
-            this.createDaoBill();
-
-            lblBillNumber.Text = index.ToString() + number.ToString();
+            lblBillNumber.Text = number.ToString();
         }
         private void BillGeneration_Load(object sender, EventArgs e)
         {
             this.updateList();
             this.showBillType();
+            this.numberGenerator();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.clearFields();
+        }
+
+        private List<Article> addingArticles()
+        {
+            List<Article> articles = new List<Article>();
+            if (txtCuantity0.Text != null)
+            {
+                Article article = new Article(txtDescription0.Text, double.Parse(txtPrice0.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity0.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            if (txtCuantity1.Text != "")
+            {
+                Article article = new Article(txtDescription1.Text, double.Parse(txtPrice1.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity1.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            if (txtCuantity2.Text != "")
+            {
+                Article article = new Article(txtDescription2.Text, double.Parse(txtPrice2.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity2.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            if (txtCuantity3.Text != "")
+            {
+                Article article = new Article(txtDescription3.Text, double.Parse(txtPrice3.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity3.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            if (txtCuantity4.Text != "")
+            {
+                Article article = new Article(txtDescription4.Text, double.Parse(txtPrice4.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity4.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            if (txtCuantity5.Text != "")
+            {
+                Article article = new Article(txtDescription5.Text, double.Parse(txtPrice5.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity5.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            if (txtCuantity6.Text != "")
+            {
+                Article article = new Article(txtDescription6.Text, double.Parse(txtPrice6.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity6.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            if (txtCuantity7.Text != "")
+            {
+                Article article = new Article(txtDescription7.Text, double.Parse(txtPrice7.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity7.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            if (txtCuantity8.Text != "")
+            {
+                Article article = new Article(txtDescription8.Text, double.Parse(txtPrice8.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity8.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            if (txtCuantity9.Text != "")
+            {
+                Article article = new Article(txtDescription9.Text, double.Parse(txtPrice9.Text));
+                for (int i = 0; i < Int32.Parse(txtCuantity9.Text); i++)
+                {
+                    articles.Add(article);
+                }
+            }
+            return articles;
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            Bill bill = this.createBill();
+            bill.addList(this.addingArticles());
+            this.createDaoBill().insert(bill);
+            this.updateList();
         }
     }
 }

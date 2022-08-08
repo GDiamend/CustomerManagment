@@ -28,7 +28,7 @@ namespace CustomerManagment.dao
             while (lecture.Read())
             {
                 //Creo una factura a la que asigno los datos devueltos de la base de datos y lo agrego a la lista
-                Bill bill = new Bill(lecture.GetString(0), (BillType)lecture.GetChar(1) , lecture.GetInt16(2), lecture.GetFieldValue<Customer>(3));
+                Bill bill = new Bill(lecture.GetString(0), (BillType)lecture.GetChar(1) , lecture.GetInt32(2), lecture.GetFieldValue<Customer>(3));
                 billList.Add(bill);
             }
             //Cierro la conexión para no saturar con varias conexiones
@@ -40,8 +40,18 @@ namespace CustomerManagment.dao
         public void insert(Bill bill)
         {
             string query = "INSERT INTO `bills` (`id`, `bill_type`, `number`, `customer_id`, `final_price`, `date`) VALUES(NULL, '"
-                + bill.billType + "', '" + bill.number + "', '" + bill.getCustomerId() + "', '" + bill.finalPrice + "', '" + DateTime.Now + "');";
+                + bill.billType + "', '" + bill.number + "', '" + bill.getCustomerId() + "', '" + bill.finalPrice + "', '" + bill.dateTime + "');";
             executeQuery(query);
+        }
+
+        public int getLastBillNumber()
+        {
+            string query = "SELECT MAX(number) FROM `bills`;";
+            MySqlCommand cmd = new MySqlCommand(query);
+            cmd.Connection = Connect();
+            MySqlDataReader lecture = cmd.ExecuteReader();
+            lecture.Read();
+            return lecture.GetInt32(0); 
         }
     }
 }

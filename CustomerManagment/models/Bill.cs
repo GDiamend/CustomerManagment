@@ -24,13 +24,24 @@ namespace CustomerManagment.models
             this.customer = customer;
             this.articles = new List<Article>();
             this.finalPrice = this.calculateFinalPrice();
-            this.dateTime = dateTime.ToLocalTime();
+            this.dateTime = this.setDateTime();
         }
 
         public string getCustomerId()
         {
             return this.customer.id;
         }
+
+        public void addList(List<Article> articles)
+        {
+            this.articles = articles;
+        }
+
+        private DateTime setDateTime()
+        {
+            return DateTime.Now;
+        }
+        
 
         private double calculateFinalPrice()
         {
