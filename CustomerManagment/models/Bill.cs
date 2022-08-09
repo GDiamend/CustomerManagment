@@ -14,7 +14,7 @@ namespace CustomerManagment.models
         public Customer customer { get; private set; }
         public List<Article> articles { get; private set; }
         public double finalPrice { get; private set; }
-        public DateTime dateTime { get; private set; }
+        public DateOnly date { get; private set; }
 
         public Bill(string id, BillType billType, int number, Customer customer)
         {
@@ -23,8 +23,8 @@ namespace CustomerManagment.models
             this.number = number;
             this.customer = customer;
             this.articles = new List<Article>();
-            this.finalPrice = this.calculateFinalPrice();
-            this.dateTime = this.setDateTime();
+            this.finalPrice = 0;
+            this.date = DateOnly.FromDateTime(DateTime.Now);
         }
 
         public string getCustomerId()
@@ -34,23 +34,21 @@ namespace CustomerManagment.models
 
         public void addList(List<Article> articles)
         {
-            this.articles = articles;
+            this.articles = new List<Article>(articles);
+            foreach (Article article in this.articles)
+            {
+                Console.WriteLine(article);
+            }
         }
 
-        private DateTime setDateTime()
-        {
-            return DateTime.Now;
-        }
-        
-
-        private double calculateFinalPrice()
+        public void calculateFinalPrice()
         {
             double finalPrice = 0;
             foreach (Article article in this.articles)
             {
                 finalPrice += article.price;
             }
-            return finalPrice;
+            this.finalPrice = finalPrice;
         }
     }
 }

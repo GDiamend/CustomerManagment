@@ -40,7 +40,7 @@ namespace CustomerManagment.dao
         public void insert(Bill bill)
         {
             string query = "INSERT INTO `bills` (`id`, `bill_type`, `number`, `customer_id`, `final_price`, `date`) VALUES(NULL, '"
-                + bill.billType + "', '" + bill.number + "', '" + bill.getCustomerId() + "', '" + bill.finalPrice + "', '" + bill.dateTime + "');";
+                + bill.billType + "', '" + bill.number + "', '" + bill.getCustomerId() + "', '" + bill.finalPrice + "', '" + bill.date.ToString("yyyy-MM-dd") + "');";
             executeQuery(query);
         }
 

@@ -67,6 +67,8 @@
             this.txtPrice0 = new System.Windows.Forms.TextBox();
             this.txtDescription0 = new System.Windows.Forms.TextBox();
             this.lblBillId = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblEnterprise = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTextBillNumber
@@ -360,11 +362,31 @@
             this.lblBillId.Size = new System.Drawing.Size(0, 15);
             this.lblBillId.TabIndex = 42;
             // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Location = new System.Drawing.Point(346, 42);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 15);
+            this.lblDate.TabIndex = 43;
+            // 
+            // lblEnterprise
+            // 
+            this.lblEnterprise.AutoSize = true;
+            this.lblEnterprise.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEnterprise.Location = new System.Drawing.Point(16, 35);
+            this.lblEnterprise.Name = "lblEnterprise";
+            this.lblEnterprise.Size = new System.Drawing.Size(166, 21);
+            this.lblEnterprise.TabIndex = 44;
+            this.lblEnterprise.Text = "Your Enterprise Here";
+            // 
             // BillGeneration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 648);
+            this.Controls.Add(this.lblEnterprise);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblBillId);
             this.Controls.Add(this.txtCuantity0);
             this.Controls.Add(this.txtPrice0);
@@ -453,5 +475,7 @@
         private TextBox txtPrice0;
         private TextBox txtDescription0;
         private Label lblBillId;
+        private Label lblDate;
+        private Label lblEnterprise;
     }
 }

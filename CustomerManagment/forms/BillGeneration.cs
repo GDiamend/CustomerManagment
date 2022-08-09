@@ -21,7 +21,7 @@ namespace CustomerManagment.forms
 
         private Bill createBill()
         {
-            Bill bill = new Bill(lblBillId.Text, (BillType)cbxBillType.SelectedItem, Int32.Parse(lblBillNumber.Text), (Customer)cbxCustomerList.SelectedItem);
+            Bill bill = new Bill(lblBillId.Text, (BillType)cbxBillType.SelectedItem, this.numberGenerator(), (Customer)cbxCustomerList.SelectedItem);
             return bill;
         }
 
@@ -100,17 +100,23 @@ namespace CustomerManagment.forms
             txtPrice9.Clear();
         }
 
-        private void numberGenerator()
+        private int numberGenerator()
         {
             int number = this.createDaoBill().getLastBillNumber() + 1;
 
-            lblBillNumber.Text = number.ToString();
+            char value = '1';
+            string[] values = number.ToString().Split(value);
+            lblBillNumber.Text = "000" + values[0] + value + "-" + values[1];
+
+            return number;
         }
+
         private void BillGeneration_Load(object sender, EventArgs e)
         {
             this.updateList();
             this.showBillType();
             this.numberGenerator();
+            lblDate.Text = DateOnly.FromDateTime(DateTime.Now).ToString();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -208,6 +214,7 @@ namespace CustomerManagment.forms
         {
             Bill bill = this.createBill();
             bill.addList(this.addingArticles());
+            bill.calculateFinalPrice();
             this.createDaoBill().insert(bill);
             this.updateList();
         }
